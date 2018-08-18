@@ -91,6 +91,13 @@
             <br>
             <br>
 
+            <h2>Number</h2>
+            <br>
+            <input type="text" name="number" class="form-control col-md-12" required>
+            
+            <br>
+            <br>
+
             <h2>Content</h2>
             <br>
             <textarea name="content" id="content"></textarea>
@@ -148,6 +155,8 @@
                     entry.imgAddr = $(this).find('[name="imgAddr"]').val();
                     entry.email = $(this).find('[name="email"]').val();
                     entry.tel = $(this).find('[name="tel"]').val();
+                    entry.number = $(this).find('[name="number"]').val();
+
 
                     entry.content = CKEDITOR.instances['content'].getData();
                     entry.createdAt = new Date().getTime();
