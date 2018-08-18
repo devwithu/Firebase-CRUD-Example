@@ -1,8 +1,6 @@
 ## Live Demo 
 
-https://earthchie.github.io/Firebase-CRUD-Example/
-
-http://earthchie.com/firebase/crud/ (Thai language interface)
+https://devwithu.github.io/Firebase-CRUD-Example/
 
 #### Rules
 ```json
