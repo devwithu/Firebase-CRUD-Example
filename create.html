@@ -44,35 +44,49 @@
         <form id="new_entry">
             <h2>StreamName</h2>
             <br>
-            <input type="text" name="title" class="form-control col-md-12" required>
+            <input type="text" name="streamName" class="form-control col-md-12" required>
             
             <br>
             <br>
 
             <h2>StreamAddr</h2>
             <br>
-            <input type="text" name="title" class="form-control col-md-12" required>
+            <input type="text" name="streamAddr" class="form-control col-md-12" required>
             
             <br>
             <br>
 
             <h2>HomeAddr</h2>
             <br>
-            <input type="text" name="title" class="form-control col-md-12" required>
+            <input type="text" name="homeAddr" class="form-control col-md-12" required>
             
             <br>
             <br>
 
             <h2>ReqAddr</h2>
             <br>
-            <input type="text" name="title" class="form-control col-md-12" required>
+            <input type="text" name="reqAddr" class="form-control col-md-12" required>
             
             <br>
             <br>
 
             <h2>ImgAddr</h2>
             <br>
-            <input type="text" name="title" class="form-control col-md-12" required>
+            <input type="text" name="imgAddr" class="form-control col-md-12" required>
+            
+            <br>
+            <br>
+
+            <h2>Email</h2>
+            <br>
+            <input type="text" name="email" class="form-control col-md-12" required>
+            
+            <br>
+            <br>
+
+            <h2>Tel</h2>
+            <br>
+            <input type="text" name="tel" class="form-control col-md-12" required>
             
             <br>
             <br>
@@ -127,7 +141,14 @@
                     e.preventDefault();
                     
                     var entry = {};
-                    entry.title = $(this).find('[name="title"]').val();
+                    entry.streamName = $(this).find('[name="streamName"]').val();
+                    entry.streamAddr = $(this).find('[name="streamAddr"]').val();
+                    entry.homeAddr = $(this).find('[name="homeAddr"]').val();
+                    entry.reqAddr = $(this).find('[name="reqAddr"]').val();
+                    entry.imgAddr = $(this).find('[name="imgAddr"]').val();
+                    entry.email = $(this).find('[name="email"]').val();
+                    entry.tel = $(this).find('[name="tel"]').val();
+
                     entry.content = CKEDITOR.instances['content'].getData();
                     entry.createdAt = new Date().getTime();
                     entry.updatedAt = entry.createdAt;
