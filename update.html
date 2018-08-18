@@ -42,9 +42,58 @@
         </nav>
         
         <form id="update_entry">
-            <h2>Title</h2>
+            <h2>StreamName</h2>
             <br>
-            <input type="text" name="title" class="form-control col-md-12" required>
+            <input type="text" name="streamName" class="form-control col-md-12" required>
+            
+            <br>
+            <br>
+
+            <h2>StreamAddr</h2>
+            <br>
+            <input type="text" name="streamAddr" class="form-control col-md-12" required>
+            
+            <br>
+            <br>
+
+            <h2>HomeAddr</h2>
+            <br>
+            <input type="text" name="homeAddr" class="form-control col-md-12" required>
+            
+            <br>
+            <br>
+
+            <h2>ReqAddr</h2>
+            <br>
+            <input type="text" name="reqAddr" class="form-control col-md-12" required>
+            
+            <br>
+            <br>
+
+            <h2>ImgAddr</h2>
+            <br>
+            <input type="text" name="imgAddr" class="form-control col-md-12" required>
+            
+            <br>
+            <br>
+
+            <h2>Email</h2>
+            <br>
+            <input type="text" name="email" class="form-control col-md-12" required>
+            
+            <br>
+            <br>
+
+            <h2>Tel</h2>
+            <br>
+            <input type="text" name="tel" class="form-control col-md-12" required>
+            
+            <br>
+            <br>
+
+            <h2>Number</h2>
+            <br>
+            <input type="text" name="number" class="form-control col-md-12" required>
             
             <br>
             <br>
@@ -100,7 +149,15 @@
                     Entry.once('value', function (r) { // once = just this once, no need to actively watch the changes
                         var entry = r.val();
                         
-                        $('#update_entry [name="title"]').val(entry.title);
+                        $('#update_entry [name="streamName"]').val(entry.streamName);
+                        $('#update_entry [name="streamAddr"]').val(entry.streamAddr);
+                        $('#update_entry [name="homeAddr"]').val(entry.homeAddr);
+                        $('#update_entry [name="reqAddr"]').val(entry.reqAddr);
+                        $('#update_entry [name="imgAddr"]').val(entry.imgAddr);
+                        $('#update_entry [name="email"]').val(entry.email);
+                        $('#update_entry [name="tel"]').val(entry.tel);
+                        $('#update_entry [name="number"]').val(entry.number);
+
                         $('#update_entry [name="content"]').val(entry.content);
                         
                         CKEDITOR.replace('content');
@@ -116,7 +173,15 @@
                         Entry.transaction(function(entry){
                             
                             entry = entry || {};
-                            entry.title = $('#update_entry [name="title"]').val();
+                            entry.streamName = $('#update_entry [name="streamName"]').val();
+                            entry.streamAddr = $('#update_entry [name="streamAddr"]').val();
+                            entry.homeAddr = $('#update_entry [name="homeAddr"]').val();
+                            entry.reqAddr = $('#update_entry [name="reqAddr"]').val();
+                            entry.imgAddr = $('#update_entry [name="imgAddr"]').val();
+                            entry.email = $('#update_entry [name="email"]').val();
+                            entry.tel = $('#update_entry [name="tel"]').val();;
+                            entry.number = $('#update_entry [name="number"]').val();
+                            
                             entry.content = CKEDITOR.instances['content'].getData();
                             entry.updatedAt = new Date().getTime();
                             entry.author = user.email;
