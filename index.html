@@ -75,10 +75,16 @@
                     '<a href="entry.html?id=' + item.getKey() + '" style="text-decoration:none!important;">' +
                     '<div class="panel panel-info">' +
                     '<div class="panel-heading">' +
-                    '<h3 class="panel-title">' + excerpt(entry.title, 140) + '</h3>' +
+                    '<h3 class="panel-title">' + excerpt(entry.streamName, 140) + '</h3>' +
                     '</div>' +
                     '<div class="panel-body">' +
-                    '<small>By ' + entry.author + ' | ' + datetimeFormat(entry.updatedAt) + ' | ' + entry.views + ' views</small>' +
+                    '<small>' + 
+                    excerpt(entry.streamName, 140) + '<br>' +
+                    excerpt(entry.streamAddr, 140) + '<br>' +
+                    excerpt(entry.homeAddr, 140) + '<br>' +
+                    excerpt(entry.reqAddr, 140) + '<br>' +
+                    excerpt(entry.imgAddr, 140) + '<br>' +
+                    '</small>' +
                     '<hr><p>' + excerpt(entry.content, 250) + '</p>' +
                     '</div>' +
                     '</div>' +
